@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 5%;
+    position:relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px,0;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: red;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.lang-btn{
+    display:inline-flex;
+    align-items: center;
+    border:1px solid white;
+    background: transparent;
+    padding: 7px,10px ;
+}
+.lang-btn img{
+    width: 10px;
+    margin-inline-start:10px;
+}
+.header-content{
+    width:70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.header-content h1{
+    font-size: 60px;
+    max-width: fit-content;
+    line-height:50px;
+}
+.header-content h3{
+    font-size:20px;
+    padding: 10px 10px;
+    font-weight: 300;
+
+}
+.header-content p{
+    padding-block: 20px 10px;
+}
+
+.email-signup{
+    background:transparent;
+    display:flex;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-top: 3px;
+    border: 0.1px solid white ;
+
+
+}
+.email-signup input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.email-signup button{
+    background: red;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+/*--features1--->*/
+
+.features{
+    padding: 100px 12%;
+    font-size: 22px;
+    margin: 50px;
+    
+
+}
+.row{
+    display:flex;
+    width: 100%;
+    align-items: center;
+    padding: 50px 0;
+    border-top: 5px solid rgb(50, 49, 49);
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+.text-col h1{
+    font-size: 50px;
+    margin-block:10px ;
+    padding-block:10px ;
+
+/*---------frequently asked questions-----------*/
+
+}
+.faq{
+    text-align: center;
+    align-items: center;
+}
+.faq h2{
+    font-size: 50px;
+}
+
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 900px;
+}
+.accordion li{
+    list-style:none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgb(52, 49, 49);
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 2px;
+}
+label::after{
+    content: '+';
+    font-size:34px;
+    position: absolute;
+    left: 95%;
+    transition: transform 0.5s;
+}
+.accordion input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: rgb(52, 49, 49) ;
+    max-height: 0;
+    overflow: hidden;
+    padding:0 20px;
+    text-align:left;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label+ .content{
+    max-height: 600px;
+    padding: 10px 10px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .sign p{
+    font-size: 20px;
+    padding: 10px 0;
+}
+.faq .sign{
+    width: 50%;
+   position: relative;
+   left: 25%;
+   right: 25%;
+   margin-bottom: 50px;
+}
+
+/*--------foooter-------*/
+
+.footer{
+    padding: 60px 12% 10px;
+    border: 5px solid rgb(52, 49, 49) ;
+    color: #a3a3a3;
+
+}
+.footer h2{
+    font-size: 18px;
+    font-weight:100 ;
+    margin-bottom: 30px;
+}
+.footer .footer-col{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+
+    
+}
+.footer .footer-col a{
+    display:block;
+    text-decoration:none;
+    text-align:left;
+    color: #838181 ;
+}
+
+.footer .footer-row{
+    
+}
+
+
+
+/*-----------media queries----small screen-------*/
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+
+    }
+    .header{
+        height: 75vh;
+    }
+    nav{
+
+    }
+    nav button{
+        padding: 5px 7px;
+
+    }
+   
+    nav .lang-btn{
+        padding: 4px 10px;
+    }
+    .header-content{
+        text-align: center;
+        position: relative;
+        top: 25%;
+    }
+    .header-content h1{
+        
+        font-size: 30px;
+        line-height: 33px;
+    }
+    .header-content h3{
+        font-size: 20px;
+        max-width: fit-content;
+    }
+    .header-content p{
+        font-size: 15px;
+    }
+    .email-signup{
+        max-width: 250px;
+        font-size: 15px;
+        max-height:30px;
+    }
+    .features{
+        padding:0 5px;
+        margin: 20px;
+        
+        text-align: center;
+    }
+    
+    .features .row{
+        display:inherit;
+        padding: 0;
+        
+    }
+    #reverse{
+        flex-direction:column-reverse;
+    } 
+
+    .text-col h1{
+        font-size: 30px;
+    }
+    .text-col p{
+        font-size: 15px;
+    }
+    .faq{
+        margin-top: 50px;
+    }
+    .faq h2{
+        font-size: 25px;
+    }
+    .faq .accordion{
+        margin: 25px auto;
+        
+    }
+    .accordion li{
+        align-items: center;
+    }
+    .accordion li label{
+        font-size:18px ;
+        padding: 15px;
+        margin-bottom: 0px;
+    }
+    label::after{
+        font-size: 25px;
+    }
+    .accordion .content{
+        font-size: 14px;
+        padding: 0,10px;
+    }
+    .faq .sign p{
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    .faq .sign{
+        width: 50%;
+       position: relative;
+       left: 25%;
+       right: 25%;
+       margin-bottom: 50px;
+    }
+    .footer h2{
+        font-size: 15px;
+        font-weight:100 ;
+        margin-bottom: 30px;
+    }
+    .footer .footer-col a{
+        font-size: 10px;
+    }    
+}
+
